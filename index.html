@@ -5,8 +5,6 @@
     </head>
     <script>
         window.onload = () => {
-            var array = window.calcFFT();
-
             var sequences = 5;
             var dPoints = [];
 
@@ -41,10 +39,10 @@
             var c = 0;
 
             var array = [];
-            for (var i = 0; i < 1000; i++) {
+            for (var i = 0; i <= 1000; i++) {
                 array.push({
                     x : c,
-                    y : window.fourierTransform(sequence, wo, c) //(((2 / Math.PI) * (Math.sin(wo * c))) + 0.5)
+                    y : window.fourierTransform(sequence, wo, c)
                 });
                 c += it;
             }
